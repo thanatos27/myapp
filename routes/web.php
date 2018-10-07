@@ -23,3 +23,6 @@
  */
 
 Route::get('/', 'HomeController@show')->name('home');
+
+
+Route::resource('/tasks', 'TasksController', ['only' => ['index']]);
