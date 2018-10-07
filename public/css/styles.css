@@ -1,0 +1,4 @@
+/*bootstrapのナビバー(fixed-top)の分bodyの高さを調整する*/
+body {
+    padding-top: 5rem;
+}

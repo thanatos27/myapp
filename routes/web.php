@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+// Home
+
+/*
+    名前付きルート
+    https://laravel10.wordpress.com/2015/03/19/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AElaravel-5-24-named-route/
+ */
+
+Route::get('/', 'HomeController@show')->name('home');
