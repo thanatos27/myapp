@@ -25,4 +25,4 @@
 Route::get('/', 'HomeController@show')->name('home');
 
 
-Route::resource('/tasks', 'TasksController', ['only' => ['index']]);
+Route::resource('/tasks', 'TasksController', ['only' => ['index', 'store', 'update', 'destroy', 'edit']]);

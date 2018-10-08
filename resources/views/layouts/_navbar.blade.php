@@ -9,7 +9,7 @@
             <li class="nav-item active">
                 {{--名前付きルート--}}
                 {{--https://laravel10.wordpress.com/2015/03/19/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AElaravel-5-24-named-route/--}}
-                <a class="nav-link" href="{{ route('tasks.index') }}">Tasks</a>
+                <a class="nav-link" href="{{ url('tasks') }}">Tasks</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
