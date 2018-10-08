@@ -10,11 +10,20 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{--bootstrapのcss--}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{--自前のcss--}}
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    @if(app('env')=='local')
+        {{--bootstrapのcss--}}
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        {{--自前のcss--}}
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    @endif
+    @if(app('env')=='production')
+        {{--bootstrapのcss--}}
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        {{--自前のcss--}}
+        <link href="{{ secure_asset('css/styles.css') }}" rel="stylesheet">
+    @endif
 
     <title>@yield('title')</title>
 </head>
@@ -27,6 +36,11 @@
 
 {{-- JS --}}
 {{--Placed at the end of the document so the pages load faster--}}
-<script src="{{ asset('js/app.js') }}" defer></script>
+@if(app('env')=='local')
+    <script src="{{ asset('js/app.js') }}" defer></script>
+@endif
+@if(app('env')=='production')
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
+@endif
 </body>
 </html>
