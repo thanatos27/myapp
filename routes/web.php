@@ -26,3 +26,6 @@ Route::get('/', 'HomeController@show')->name('home');
 
 
 Route::resource('/tasks', 'TasksController', ['only' => ['index', 'store', 'update', 'destroy', 'edit']]);
+
+Route::get('/weather', 'ApiTestController@weather')->name('weather');
+Route::get('/youtube', 'ApiTestController@youtube')->name('youtube');
