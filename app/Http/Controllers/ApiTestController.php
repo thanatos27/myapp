@@ -13,9 +13,9 @@ class ApiTestController extends Controller
         $url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=130010"; // 東京
         $obj = $this->api_request($url);
 
-        $today_telop = $obj['forecasts'][0]['telop']; // 今日の天気
+//        $today_telop = $obj['forecasts'][0]['telop']; // ex.今日の天気
 
-        return $today_telop;
+        return view('api.weather', compact('obj'));
     }
 
     public function youtube()
@@ -29,7 +29,8 @@ class ApiTestController extends Controller
         $url = "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=".$channel_id."&key=".$api_key;
         $obj = $this->api_request($url);
 
-        return $obj['items'][0]['statistics']['viewCount']; // チャンネルの視聴回数
+        $view_count = $obj['items'][0]['statistics']['viewCount']; // チャンネルの視聴回数
+        return view('api.youtube', compact('view_count'));
     }
 
     function api_request($url)

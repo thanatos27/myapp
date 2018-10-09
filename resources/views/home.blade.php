@@ -3,5 +3,7 @@
 
 @section('content')
     <p>HOME PAGE</p>
-    <a href='/tasks'>Tasks</a>
+    <p><a href="{{ url('/tasks') }}">Tasks</a></p>
+    <p><a href="{{ url('/weather') }}">Weather</a></p>
+    <p><a href="{{ url('/youtube') }}">YouTube</a></p>
 @endsection
