@@ -2,8 +2,8 @@
 @section('title', 'HOME')
 
 @section('content')
-    <p>HOME PAGE</p>
-    <p><a href="{{ url('/tasks') }}">Tasks</a></p>
-    <p><a href="{{ url('/weather') }}">Weather</a></p>
-    <p><a href="{{ url('/youtube') }}">YouTube</a></p>
+<div class="jambotron text-center" style="background-color: #449; color: #FFF;">
+    <h1>MY APP</h1>
+    <p>Laravel + Vue.js + Bootstrap4</p>
+</div>
 @endsection
