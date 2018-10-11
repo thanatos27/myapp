@@ -2,7 +2,7 @@
 @section('title', 'HOME')
 
 @section('content')
-<div class="jambotron text-center" style="background-color: #449; color: #FFF;">
+<div class="jumbotron text-center">
     <h1>MY APP</h1>
     <p>Laravel + Vue.js + Bootstrap4</p>
 </div>
