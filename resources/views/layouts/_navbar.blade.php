@@ -14,6 +14,9 @@
             <li class="nav-item {{$_SERVER['REQUEST_URI'] == '/weather' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('weather') }}">weather</a>
             </li>
+            <li class="nav-item {{$_SERVER['REQUEST_URI'] == '/vue' ? 'active' : '' }}">
+                <a class="nav-link" href="{{ url('vue/example') }}">vue-example</a>
+            </li>
         </ul>
     </div>
 </nav>
