@@ -7,7 +7,7 @@
             {{--https://qiita.com/fruitriin/items/e0f2c9aa035c3ff2c874--}}
             {{-- デフォルトだとこの中ではvue.jsが有効 --}}
             {{-- example-component はLaravelに入っているサンプルのコンポーネント --}}
-            <example-component></example-component>
+            <test-component></test-component>
         </div>
     </div>
 @endsection
