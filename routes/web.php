@@ -29,3 +29,5 @@ Route::resource('/tasks', 'TasksController', ['only' => ['index', 'store', 'upda
 
 Route::get('/weather', 'ApiTestController@weather')->name('weather');
 Route::get('/youtube', 'ApiTestController@youtube')->name('youtube');
+
+Route::get('/vue/example', 'VueController@example')->name('example');
