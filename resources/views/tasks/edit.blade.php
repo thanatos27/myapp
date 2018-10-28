@@ -11,12 +11,12 @@
                 @method('PUT')
                 <div class="form-group">
                     <label for="name">name</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $task->name }}">
+                    <input type="text" class="form-control" name="name" value="{{ $task->name }}">
                 </div>
 
                 <div class="form-group">
                     <label for="name">description</label>
-                    <textarea class="form-control  input-sm" rows="10" id="description" name="description">{{ $task->description }}</textarea>
+                    <textarea class="form-control  input-sm" rows="10" name="description">{{ $task->description }}</textarea>
                 </div>
                 <div class="form-group float-left">
                     <button type="submit" class="btn btn-primary">Update</button>
